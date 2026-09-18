@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import MagneticButton from './MagneticButton.jsx';
 import StudentJoinStrip from './StudentJoinStrip.jsx';
 
-export default function Hero() {
+export default function Hero({ onLaunchDashboard, onJoinBattlezone }) {
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -61,7 +61,7 @@ export default function Hero() {
         <div className="signup-container">
           {createdRoomCode ? (
             <div className="success-room-ui" style={{ padding: '1rem 0' }}>
-              <div className="teacher-badge" style={{ backgroundColor: '#dcfce7', color: '#16a34a' }}>
+              <div className="teacher-badge" style={{ backgroundColor: '#fce7f3', color: '#be185d' }}>
                 ROOM CREATED SUCCESSFULLY
               </div>
               <h3 style={{ marginTop: '1.25rem', marginBottom: '0.25rem', fontSize: '1.1rem', color: 'var(--text-gray)' }}>
@@ -87,7 +87,7 @@ export default function Hero() {
                 gap: '0.6rem',
                 fontWeight: 600,
                 boxShadow: '0 8px 20px rgba(0,0,0,0.15)'
-              }}>
+              }} onClick={() => onLaunchDashboard(createdRoomCode, email)}>
                 Launch Projector Dashboard
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </MagneticButton>
@@ -145,7 +145,7 @@ export default function Hero() {
             className="hero-image"
           />
         </div>
-        <StudentJoinStrip />
+        <StudentJoinStrip onJoinBattlezone={onJoinBattlezone} />
       </div>
     </main>
   );

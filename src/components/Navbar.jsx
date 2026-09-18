@@ -38,10 +38,7 @@ export default function Navbar() {
       <div className="nav-right">
         <nav className="nav-links">
           <a href="#teachers">For Teachers</a>
-          <a href="#how-it-works">How it Works</a>
-          <a href="#impact">Research & Data</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#support">Support</a>
+          <a href="#impact">Platform Impact</a>
         </nav>
         <button onClick={toggleTheme} className="theme-toggle-btn" aria-label="Toggle dark mode" style={{ background: 'none', border: 'none', fontSize: '1.2rem', cursor: 'pointer', marginRight: '1rem', marginLeft: '1rem' }}>
           {isDarkMode ? '☀️' : '🌙'}

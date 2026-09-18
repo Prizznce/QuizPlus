@@ -341,20 +341,17 @@ body {
     display: flex;
     width: 100%;
     max-width: 600px;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 999px;
-    padding: 0.5rem;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
     gap: 0.5rem;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
 [data-theme='dark'] .join-strip-form {
-    background: rgba(30, 41, 59, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    background: transparent;
+    border: none;
+    box-shadow: none;
 }
 
 .join-strip-input {
@@ -1573,7 +1570,7 @@ body {
 .blob-2 {
     width: 45vw;
     height: 45vw;
-    background: rgba(110, 231, 183, 0.35); /* Mint Green */
+    background: rgba(196, 181, 253, 0.35); /* Lighter Purple */
     bottom: 10%;
     right: 10%;
     animation-duration: 30s;
@@ -1583,7 +1580,7 @@ body {
 .blob-3 {
     width: 40vw;
     height: 40vw;
-    background: rgba(147, 197, 253, 0.35); /* Soft Blue */
+    background: rgba(139, 92, 246, 0.25); /* Deep Purple */
     top: 30%;
     left: 40%;
     animation-duration: 35s;
